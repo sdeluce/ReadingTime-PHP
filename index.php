@@ -42,14 +42,13 @@
 		require 'class/TimeToRead.php';
 
 		// Get Content with API
-		$content = file_get_contents('http://loripsum.net/api/10/long/headers');
-		$contenttest = file_get_contents('http://loripsum.net/api/10/medium/headers');
+		$content = file_get_contents('http://loripsum.net/api/1/small/headers');
 		$readingtime = new TimeToRead(2.5);
 	?>
 
 	<div class="content">
 		<div class="reading-time">
-			<p>Reading time in min : <?php echo $readingtime->get_minutes($content); ?> min</p>
+			<p>Reading time : <?php echo $readingtime->get_minutes($content); ?></p>
 			<p>Reading time : <?php echo $readingtime->get_time($content); ?> </p>
 		</div>
 		<article>
